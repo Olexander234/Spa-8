@@ -1,0 +1,1193 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2C5F4E;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+
+
+.header-right a, .btn-header {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-header {
+  background-color: #e88c0b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-header:hover, .header-right a:hover {
+  background-color: #555;
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slideshow-container {
+  margin-top: 60px; /* Отступ для хедера */
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.slider-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #e88c0b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-button:hover {
+  background-color: #e88c0b;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .header-right a,
+  .btn-header {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-right.active {
+    display: flex;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .slider-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text {
+    font-size: 2rem;
+  }
+
+  .slider-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+   .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @media (max-width: 768px) {
+    .text {
+      font-size: 50px;
+      margin-top: -200px;
+    }
+    .text-title {
+      font-size: 20px;
+      margin-top: -250px;
+    }
+    .slider-button {
+      padding: 12px 40px;
+      font-size: 14px;
+    }
+  }
+  
+
+
+
+
+
+main{
+  max-width: 100%;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  
+}
+
+.blog{
+  width: 100%;
+  height: 300px;
+  
+}
+
+
+
+  /* Slideshow container */
+.blog-container {
+  position: relative;
+  background:  #f1f1f1f1;
+}
+
+/* Slides */
+.blog-text {
+ 
+  padding: 40px;
+  text-align: left;
+}
+.author {
+  color: cornflowerblue;
+}
+h4, p {
+  font-style: italic;
+  font-size: 22px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Основной стиль для секции портфолио */
+.portfolio {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+}
+
+.portfolio-text {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  padding: 3%;
+  font-style: normal;
+}
+
+/* Сетка для галереи */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Расстояние между колонками */
+}
+
+/* Стили для колонок */
+.column {
+  flex: 1 1 30%; /* Каждая колонка займет минимум 30% ширины */
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box; /* Для учета padding в ширине */
+  transition: transform 0.3s ease; /* Плавный переход при увеличении */
+}
+
+/* Эффект при наведении */
+.column:hover {
+  transform: scale(1.05); /* Увеличение блока на 5% */
+}
+
+/* Контейнер для контента */
+.conter {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.column img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.column h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+.column p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .portfolio-text {
+    font-size: 14px;
+  }
+
+  /* Сетка для мобильных устройств: 1 колонка */
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Для планшетов и небольших экранов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  .portfolio-text {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .column {
+    flex: 1 1 45%; /* Две колонки на экранах от 768px до 1024px */
+  }
+}
+
+/* Для экранов более 1024px (десктопы, телевизоры) */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 50px;
+  }
+
+  .portfolio-text {
+    font-size: 18px;
+  }
+
+  .column {
+    flex: 1 1 30%; /* Три колонки на больших экранах */
+  }
+}
+
+
+
+
+
+.price-section{
+ 
+  
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 20px;
+ 
+
+  
+}
+
+.price-section-title{
+  font-size: 50px;
+  word-break: break-all;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.price-text{
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  padding: 3%;
+  font-style: normal;  
+}
+
+.pricing-table {
+ display: flex;
+  gap: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  
+}
+
+.pricing-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1%;
+  float: right;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+  
+  background-color: #f0f8ff;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.price {
+  font-size: 2.5rem;
+  color: #2C5F4E;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.features li {
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2C5F4E;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(236, 84, 14);
+}
+
+.plan-image {
+  width: 80px; /* Размер изображения */
+  height: auto; /* Сохранять пропорции */
+  margin: 0 auto 20px; /* Центрирование и отступ снизу */
+  display: block;
+  border-radius: 50%; /* Пример с закруглением изображения */
+  border: 2px solid #ddd; /* Пример обводки */
+}
+
+.featured .plan-image {
+  border-color: #007BFF; /* Цвет рамки для выделенного плана */
+}
+
+
+
+@media (max-width: 768px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* Общие стили */
+.sertificat {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.price-section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.price-text {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Общий стиль для контейнера */
+.sertificat {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.price-section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.price-text {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.sertificat{
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 20px;
+ 
+ 
+ 
+
+
+
+}
+
+.sertificat-title{
+  font-size: 50px;
+  word-break: break-all;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+
+.sertificat-text{
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  padding: 3%;
+  font-style: normal; 
+  color: black;
+}
+
+.sertificat-info{
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 20px;
+ 
+ 
+ 
+
+background-color: #2C5F4E;
+}
+
+ 
+.circle-container  {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+ display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+  
+  
+}
+
+.block-left1, .block-left2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 1000px; /* Ограничение ширины контейнера */
+
+float: left;
+
+height: 200px;
+
+}
+
+.block-left1-1, .block-left2-1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 1000px; /* Ограничение ширины контейнера */
+
+
+float: right;
+
+
+height: 200px;
+
+}
+
+.block-left2, .block-left2-1{
+  margin-top: 250px;
+}
+
+/* Блоки (два ряда) */
+.block-left1, .block-left2, .block-left1-1, .block-left2-1 {
+ 
+  opacity: 0.7;
+  padding: 5px;
+  border-radius: 5px;
+  width: 210px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.block-left-text{
+  text-align: left;
+  font-family: "Zeyada", cursive;
+  font-weight: 400;
+ 
+  font-size: 30px;
+  padding: 0.7%;
+  font-style: normal; 
+  color: white;
+}
+
+
+.block-left1-text{
+  text-align: left;
+  font-family: "Podkova", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.circle-container div {
+  width: 50%; /* Каждое изображение занимает 1/4 пространства */
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease; /* Плавный переход при увеличении */
+}
+
+/* Эффект зума при наведении */
+.circle-container div:hover img {
+  transform: scale(1.2); /* Увеличение изображения */
+}
+
+/* Для больших экранов увеличиваем размер круга */
+@media (min-width: 768px) {
+  .circle-container {
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle-container div:hover img {
+    transform: scale(1.4); /* Более сильное увеличение для больших экранов */
+  }
+}
+/* Адаптивность: мобильные устройства */
+@media (max-width: 767px) {
+  .sertificat-title {
+    font-size: 35px;
+  }
+
+  .sertificat-text {
+    font-size: 14px;
+  }
+
+  .blocks-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-container div {
+    width: 50%;
+    height: 50%;
+  }
+
+  .block-left1, .block-left2, .block-left1-1, .block-left2-1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Для планшетов и небольших экранов (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .circle-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .circle-container div {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* Для десктопов и больших экранов (1025px и выше) */
+@media (min-width: 1025px) {
+  .sertificat-title {
+    font-size: 50px;
+  }
+
+  .circle-container {
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle-container div {
+    width: 50%;
+    height: 50%;
+  }
+
+  .blocks-container {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1920px) {
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+/* Основные стили */
+.reviews {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+}
+
+.reviews-text {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  padding: 3%;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Обертка для отзывов */
+.reviews-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Контейнер для отзывов */
+.review-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+/* Стиль для отдельных отзывов */
+.review {
+  min-width: 250px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.review h4 {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.review p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Стрелки прокрутки */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .reviews-text {
+    font-size: 14px;
+  }
+
+  .review {
+    min-width: 80%;
+  }
+
+  .scroll-button {
+    font-size: 20px;
+  }
+}
+
+/* Для планшетов и небольших экранов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  .reviews-text {
+    font-size: 16px;
+  }
+
+  .review {
+    min-width: 45%;
+  }
+}
+
+/* Для больших экранов (десктопы и телевизоры) */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 50px;
+  }
+
+  .reviews-text {
+    font-size: 18px;
+  }
+
+  .review {
+    min-width: 30%;
+  }
+}
+/* Основные стили */
+.contact-form {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+}
+
+/* Контент */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-info {
+  width: 48%;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.map-container {
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Социальные ссылки */
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #2C5F4E;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 767px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .map-container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .social-links a {
+    font-size: 16px;
+  }
+}
+
+/* Для планшетов и небольших экранов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-info {
+    width: 45%;
+  }
+
+  .map-container {
+    width: 45%;
+  }
+}
+
+/* Для больших экранов (десктопы и телевизоры) */
+@media (min-width: 1024px) {
+  .contact-info {
+    width: 45%;
+  }
+
+  .map-container {
+    width: 45%;
+  }
+}
+/* Основной футер */
+.footer {
+  background-color: #2C5F4E;
+  color: white;
+  padding: 20px 0;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+
+/* Контейнер футера */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Логотип */
+.footer-logo img {
+  width: 110%;
+  height: auto;
+  
+  
+}
+
+/* Блоки с ссылками */
+.footer-links {
+  width: 200px; /* 2 блока на одной линии */
+
+  border: 1px solid #000;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f2a900;
+}
+
+/* Нижний блок с копирайтом */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Социальные иконки */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links a {
+    margin: 0 15px;
+  }
+}
+
+/* Для планшетов и небольших экранов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-logo img {
+    width: 110px;
+  }
+}
+
+/* Для больших экранов (десктопы и телевизоры) */
+@media (min-width: 1024px) {
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-logo img {
+    width: 65%;
+    float: left;
+    margin: 0 0 -250px;
+  }
+}
+
